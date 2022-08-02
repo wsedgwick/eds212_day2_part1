@@ -18,9 +18,10 @@ library(palmerpenguins)
 
 ggplot(data = penguins, aes(x = body_mass_g, y =flipper_length_mm)) +
   geom_point(aes(color = species), size = 4) +
+  facet_wrap(~island) +
   xlab("Body Mass (in cm)") +
-  ylab("Flipper Length (in mm)")
-#  geom_smooth(aes(color = species))
+  ylab("Flipper Length (in mm)") +
+  ggtitle("Body Mass vs. Flipper Length for 3 Species")
 
 
 ```
